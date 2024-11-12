@@ -10,6 +10,8 @@ body {
         line-height: 111.3%; /* 53.424px */
         letter-spacing: 30.24px;
         text-transform: uppercase;
+
+        margin: 0;
     }
 
     h2 {
@@ -21,6 +23,8 @@ body {
         line-height: 111.3%; /* 44.52px */
         letter-spacing: 25.2px;
         text-transform: uppercase;
+
+        margin: 0;
     }
 
     h3 {
@@ -32,6 +36,16 @@ body {
         line-height: 111.3%; /* 31.164px */
         letter-spacing: 17.64px;
         text-transform: uppercase;
+
+        margin: 0;
+    }
+
+    p {
+        color: white;
+        font-family: Poppins;
+        font-size: 20px;
+
+        margin: 0;
     }
 }
 
@@ -44,28 +58,65 @@ body {
         width: fit-content;
         margin: 20px auto;
 
-        background: rgba(255, 255, 255, 0.06);
-        backdrop-filter: blur(4.199999809265137px);
+        /* background: rgba(255, 255, 255, 0.06); */
+        /* backdrop-filter: blur(4.199999809265137px);
         border-radius: 30px;
-        border: 1px solid rgba(255, 255, 255, 0.58);
+        border: 1px solid rgba(255, 255, 255, 0.58); */
 
         h1 {
             width: fit-content;
         }
 
     }
+
+    
+
     
     
     .img-holder.mars {
         /* width: 100vw; */
-        height: 400px;
+        height: 800px;
         margin-bottom: 80px;
+        position: relative;
 
         background-image: url("./images/mars.jpg");
         /* background-position: center; */
         background-size: cover;
         background-repeat: no-repeat;
         box-shadow: 0px -27px 55px 25px #000 inset;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        .size-wrapper, distance-wrapper {
+            width: fit-content;
+        }
+
+        .size, .distance {
+            width: 350px;
+            padding: 40px 20px;
+            display: block;
+    
+            transition: all 1.5s;
+            opacity: 0;
+            
+            &.show {
+                opacity: 1;
+            }
+
+            h3 {
+                text-align: center;
+                margin-bottom: 10px;;
+                
+            }
+
+            p {
+                text-align: l;
+                text-align: center;
+            }
+        }
     }
 
     h2 {
@@ -101,7 +152,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.58);

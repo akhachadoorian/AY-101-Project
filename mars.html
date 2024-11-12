@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<!-- https://science.nasa.gov/mars/facts/ -->
+
 <html>
     <head>
         <title>Alex Khachadoorian AY 101 Project</title>
@@ -9,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
     </head>
 
     <body>
@@ -16,8 +19,24 @@
             <div class="planet-header">
                 <h1>Mars</h1>
             </div>
-            
-            <div class="img-holder mars"></div>
+
+            <div class="img-holder mars">
+                <div class="size-wrapper">
+                    <div class="glass-box size">
+                        <h3>Radius</h3>
+                        <p>2,106 miles</p>
+                        <p>3,390 kilometers</p>
+                    </div>
+                </div>
+                <div class="distance-wrapper">
+                    <div class="glass-box distance">
+                        <h3>Distance from Sun</h3>
+                        <p>142 million miles</p>
+                        <p>228 million kilometers</p>
+                        <p>1.5 astronomical</p>
+                    </div>
+                </div>
+            </div>
 
             <h2>Composition and Structure</h2>
             <div class="composition mars">
@@ -29,6 +48,7 @@
 
             <div class="glass-box">
                 <h3>Geological Activity</h3>
+                <i class="ph ph-triangle"style="color: white"></i>
             </div>
 
             <div class="glass-box">
@@ -37,3 +57,37 @@
         </div>
     </body>
 </html>
+
+<script>
+const observerSize = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const size = entry.target.querySelector('.size');
+
+    if (entry.isIntersecting) {
+        size.classList.add('show');
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    size.classList.remove('show');
+  });
+});
+
+observerSize.observe(document.querySelector('.size-wrapper'));
+
+const observerDistance = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const distance = entry.target.querySelector('.distance');
+
+    if (entry.isIntersecting) {
+        distance.classList.add('show');
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    distance.classList.remove('show');
+  });
+});
+
+observerDistance.observe(document.querySelector('.distance-wrapper'));
+</script>

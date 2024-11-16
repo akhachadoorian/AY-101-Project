@@ -6,8 +6,8 @@ body {
 h1 {
     color: white;
     font-family: Poppins;
-    /* font-size: 50px; */
-    font-size: 10vw;
+    /* font-size: 80px; */
+    font-size: max(10vw, 80px);
     font-style: normal;
     font-weight: 700;
     line-height: 111.3%; /* 53.424px */
@@ -21,7 +21,8 @@ h1 {
 h2 {
     color: white;
     font-family: Poppins;
-    font-size: 4.5vw;
+    /* font-size: 4.5vw; */
+    font-size: 60px;
     font-style: normal;
     font-weight: 700;
     line-height: 111.3%; /* 44.52px */
@@ -35,7 +36,8 @@ h2 {
 h3 {
     color: white;
     font-family: Poppins;
-    font-size: 2.8vw;
+    /* font-size: 2.8vw; */
+    font-size: max(36px, 2.8vw);
     font-style: normal;
     font-weight: 700;
     line-height: 111.3%; /* 31.164px */
@@ -48,9 +50,10 @@ h3 {
 h4 {
     color: white;
     font-family: Poppins;
-    font-size: 2vw;
+    /* font-size: 2vw; */
+    font-size: max(30px, 2.1vw);
     font-weight: 700;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 
     margin: 0;
 }
@@ -68,10 +71,14 @@ h6 {
 p, li, a {
     color: white;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
 
     margin: 0 0 5px 0;
+}
+
+strong {
+    text-transform: uppercase;
 }
 
 i {
@@ -80,7 +87,7 @@ i {
 }
 
 footer {
-    margin-top: 30px;
+    margin-top: 80px;
 
     .footer {
         display: flex;
@@ -272,7 +279,7 @@ footer {
 
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     /* align-items: center; */
     gap: 20px;
 
@@ -302,47 +309,104 @@ footer {
      }
 }
 
-.galaxy-header {
-    margin: 10px;
-
-    
-
-    .galaxy {
-        background-image: url("./images/MilklyWay.jpg");
-        background-repeat: no-repeat;  
-        background-size: cover;
-        background-position: center;
-
-        /* box-shadow: 0px -27px 55px 25px #000; */
-
-        height: 100vh;
-        border-radius: 20px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+.icon-w-head {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    gap: 15px;
 }
 
-.formation-solar-system {
-    margin: 20px;
+.index {
+    h2, h4, i {
+        color:#7a89ac;
+    }
 
-    .formation {
-        display: flex;
-        justify-content: space-between;
-        /* gap: 20px; */
-    
-        .glass-box {
-            flex: 0 0 23%;
-            margin: 0;
-        }
-    
-        i {
-            flex: 0 0 32px;
-            /* flex: 0 0 10%; */
+    i {
+        font-size: max(30px, 3vw);
+    }
+
+    h4 {
+        /* flex: 0 1 80%; */
+    }
+
+    strong {
+        color: #b1abb2
+
+
+    }
+
+    .galaxy-header {
+        margin: 10px;
+        .galaxy {
+            background-image: url("./images/MilklyWay.jpg");
+            background-repeat: no-repeat;  
+            background-size: cover;
+            background-position: center;
+
+            /* box-shadow: 0px -27px 55px 25px #000; */
+
+            height: 100vh;
+            border-radius: 20px;
+
             display: flex;
-            align-items: center;
-            font-size: 4vw;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    .formation-solar-system {
+        margin: 120px 20px;
+
+        .formation {
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+        
+            .glass-box {
+                flex: 0 1 30%;
+                margin: 0;
+
+
+            }
+        
+            i {
+                flex: 0 0 32px;
+                /* flex: 0 0 10%; */
+                display: flex;
+                align-items: center;
+                font-size: 4vw;
+            }
+        }
+    }
+
+    .planet-components {
+        margin: 120px 20px;
+
+        .planet-comp {
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+
+            .glass-box {
+                flex: 0 1 50%;
+            }
+        }
+    }
+
+    .protoplanet-formation {
+        .proto-planet {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            .text {
+                flex: 0 1 70%;
+            }
+
+            .filler { 
+                flex: 0 1 30%;
+            }
         }
     }
 }
